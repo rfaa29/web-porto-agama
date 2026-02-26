@@ -1,0 +1,203 @@
+/* ========== GLOBAL STYLES ========== */
+:root {
+  --bg: #f9f7fc;
+  --card: #ffffff;
+  --accent: #b98ce3;
+  --accent2: #f7a8c4;
+  --text: #444;
+  --muted: #777;
+  --radius: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+/* ========== HEADER ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 14px 30px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+}
+
+header h1 {
+  color: var(--accent);
+  font-size: 20px;
+  margin: 0;
+}
+
+header .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+header input {
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  padding: 7px 12px;
+}
+
+header .post-btn {
+  background: var(--accent2);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 7px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+header .post-btn:hover {
+  opacity: 0.85;
+}
+
+.icon {
+    width: 30px;
+    height: auto;
+}
+
+/* ========== LAYOUT ========== */
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  background: var(--card);
+  flex: 0 0 260px;
+  border-radius: var(--radius);
+  padding: 25px 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+.sidebar .avatar {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+.username {
+  text-align: center;
+  color: var(--accent2);
+  margin-bottom: 4px;
+}
+
+.handle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.bio, .joined {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.socials {
+  margin: 15px 0;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.friends ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.friends li {
+  background: #f7f2fa;
+  border-radius: var(--radius);
+  padding: 6px 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+/* ========== MAIN CONTENT ========== */
+.content {
+  flex: 1;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+.tabs {
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.tabs span.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+}
+
+.about p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ========== PORTOFOLIO GRID ========== */
+.portofolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portofolio img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ========== CARD TAGS ========== */
+.char {
+  padding: 12px;
+  border-radius: var(--radius);
+  font-size: 13px;
+}
+
+.char.pink { background: #fce4ec; }
+.char.yellow { background: #fff7d6; }
+.char.blue { background: #e1ebff; }
+.char.green { background: #dbfbdb; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sidebar {
+    flex: none;
+  }
+}
